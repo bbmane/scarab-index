@@ -1,0 +1,23 @@
+{
+  "name": "scarabindex",
+  "version": "0.1.0",
+  "description": "A curated, typed index of resources (online and offline) for studying Egyptology, organized by level.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "scarab": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/build-web.mjs",
+    "build:ts": "tsc -p tsconfig.json",
+    "build:web": "node scripts/build-web.mjs",
+    "start": "node dist/cli.js",
+    "dev": "node --loader ts-node/esm src/cli.ts",
+    "lint": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "ts-node": "^10.9.2"
+  }
+}
